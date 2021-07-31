@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
+import { Header } from './Components/Header';
+import { Learn } from './Views/Learn';
 import './App.css';
 
 function App() {
-  const [welcome, setWelcome] = useState("Default");
+  /*const [welcome, setWelcome] = useState("Default");
 
   const getWelcomeMessage = async() => {
     const response = await fetch("http://localhost:5000", {
@@ -18,11 +20,12 @@ function App() {
 
   useEffect(() => {
     getWelcomeMessage();
-  });
+  });*/
 
   return (
     <div className="App">
-      <h1>{welcome}</h1>
+      <Header></Header>
+      <Learn></Learn>
     </div>
   );
 }
