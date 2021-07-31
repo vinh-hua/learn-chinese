@@ -5,6 +5,7 @@ export function Learn() {
     const [hanzi, setHanzi] = useState("N/A");
     const [pinyin, setPinyin] = useState("N/A");
     const [translations, setTranslations] = useState<any[]>([]);
+    const [level, setLevel] = useState(0);
 
     const getVocab = async() => {
         const response = await fetch("http://localhost:5000/vocab", {
@@ -25,11 +26,12 @@ export function Learn() {
             translations_list.push(vocab["translations"][i]);
         }
         setTranslations(translations_list);
+        setLevel(vocab["level"]);
     }
 
     useEffect(() => {
         getVocab();
-    });
+    }, []);
 
     return (
         <div>
@@ -37,6 +39,7 @@ export function Learn() {
                 <p>{hanzi}</p>
                 <p>{pinyin}</p>
                 <p>{translations}</p> 
+                <p>HSK {level}</p>
             </div>
             <div>
                 <button>audio</button>
