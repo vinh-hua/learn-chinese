@@ -1,3 +1,13 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
 .header-title {
+    margin-left: 5%;
     color: #DC2E3F;
+}
+
+.account {
+    margin-right: 5%;
 }

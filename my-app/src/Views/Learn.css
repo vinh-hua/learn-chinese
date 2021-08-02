@@ -1,0 +1,14 @@
+.hanzi {
+    font-weight: bold;
+    font-size: 64px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.pinyin {
+    font-size: 24px;
+}
+
+.translations {
+    font-size: 16px;
+}
